@@ -46,7 +46,7 @@ namespace RpgCharacters
             Xp = category.InitialXp;
         }
 
-        public double OnAttack(Random rng = null)
+        public double OnAttack(Random? rng = null)
         {
             rng ??= Random.Shared;
 
@@ -57,7 +57,7 @@ namespace RpgCharacters
             return baseAttack * factor;
         }
 
-        public double OnDefend(Random rng = null)
+        public double OnDefend(Random? rng = null)
         {
             rng ??= Random.Shared;
 
@@ -68,7 +68,7 @@ namespace RpgCharacters
             return baseDefense * factor;
         }
 
-        public string OnWin(Random rng = null)
+        public string OnWin(Random? rng = null)
         {
             rng ??= Random.Shared;
             return Race.GetVictoryMessage(rng);
