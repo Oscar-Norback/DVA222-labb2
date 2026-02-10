@@ -5,7 +5,7 @@ namespace RpgCharacters
     public sealed class Character
     {
         private double xp;
-        private double hp;
+        private int hp;
 
         public string Name { get; }
         public IRace Race { get; }
@@ -45,7 +45,7 @@ namespace RpgCharacters
             Hp = race.MaxHp;
             Xp = category.InitialXp;
         }
-
+        
         public double OnAttack(Random? rng = null)
         {
             rng ??= Random.Shared;
