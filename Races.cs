@@ -43,48 +43,48 @@ namespace RpgCharacters
     public sealed class FairyRace : RaceBase
     {
         public FairyRace() : base(
-            name: "Fairy",
-            strength: 2,
-            agility: 5,
-            intelligence: 9,
-            maxHp: 20,
-            victoryMessage: " Fairy laughs triumphantly!")
+            "Fairy",
+            2,
+            5,
+            9,
+            20,
+            " Fairy laughs triumphantly!"," Fairy sprinkles victory dust!", " Fairy dances in joy!")
         { }
     }
 
     public sealed class OrcRace : RaceBase
     {
         public OrcRace() : base(
-            name: "Orc",
-            strength: 10,
-            agility: 3,
-            intelligence: 2,
-            maxHp: 40,
-            victoryMessage: " Orc roars victoriously!")
+            "Orc",
+            10,
+            3,
+            2,
+            40,
+            " Orc roars victoriously!", " Orc pounds chest in triumph!", " Orc howls in victory!")
         { }
     }
 
     public sealed class ElfRace : RaceBase
     {
         public ElfRace() : base(
-            name: "Elf",
-            strength: 4,
-            agility: 7,
-            intelligence: 6,
-            maxHp: 30,
-            victoryMessage: " Elf bows gracefully in victory!")
+            "Elf",
+            4,
+            7,
+            6,
+            30,
+            " Elf bows gracefully in victory!", " Elf smiles with satisfaction!", " Elf sings a victory song!")
         { }
     }
 
     public sealed class HumanRace : RaceBase
     {
         public HumanRace() : base(
-            name: "Human",
-            strength: 6,
-            agility: 6,
-            intelligence: 6,
-            maxHp: 35,
-            victoryMessage: " Human raises a fist in triumph!")
+            "Human",
+            6,
+            6,
+            6,
+            35,
+            " Human raises a fist in triumph!", " Human shouts in victory!", " Human celebrates with a dance!")
         { }
     }
 }
