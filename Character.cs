@@ -15,12 +15,17 @@ namespace RpgCharacters
 
         public int Hp
         {
-            get => (int)hp;
+            get => hp;
             set
             {
-                if (value < 0 || value > MaxHp)
-                    throw new ArgumentOutOfRangeException(nameof(Hp), $"HP must be between 0 and {MaxHp}.");
+                if (value < 0 )
+                    hp = 0;
+                else if (value > MaxHp)
+                    hp = MaxHp;
+                else        
                 hp = value;
+
+                //set => hp = Math.Clamp(value, 0, MaxHp); gör samma sak som koden över bara bättre skriven. 
             }
         }
 
@@ -29,9 +34,12 @@ namespace RpgCharacters
             get => xp;
             set
             {
-                if (value < 0 || value > 10)
-                    throw new ArgumentOutOfRangeException(nameof(Xp), "XP must be between 0 and 10.");
-                xp = value;
+                if (value < 0)
+                    xp = 0;
+                else if (value > 10)
+                    xp = 10;
+                else
+                    xp = value;
             }
         }
 
@@ -45,7 +53,7 @@ namespace RpgCharacters
             Hp = race.MaxHp;
             Xp = category.InitialXp;
         }
-        
+
         public double OnAttack(Random? rng = null)
         {
             rng ??= Random.Shared;
